@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/* Estilos base */
+.column {
+  width: 100%;
+}
+
+header#cabecalho h2 {
+  text-transform: uppercase;
+}
+
+h1 {
+  text-align: center;
+}
+
+header p {
+  font-size: 17px;
+}
+
+header img {
+  width: 80%; /* Alterado de largura fixa para porcentagem para responsividade */
+  height: auto; /* Ajustar altura automaticamente */
+  position: relative;
+  padding: 3px; /* Removido o padding fixo */
+  background-color: rgb(10, 0, 54);
+  margin: auto;
+}
+
+body {
+  background-color: rgb(207, 31, 31);
+}
+
+p {
+  text-align: justify;
+}
+
+nav#mecanica {
+  background-color: rgba(100, 133, 223, 0.9);
+  padding: 50px;
+  margin: 2px;
+  font-size: 20px;
+  box-shadow: 2px 2px 4px black;
+  display: block;
+}
+
+nav#calorimetria {
+    background-color: rgba(223, 133, 100, 0.9);
+    padding: 50px;
+    margin: 2px;
+    font-size: 20px;
+    box-shadow: 2px 2px 4px black;
+    display: block;
+  }
+
+nav#calorimetria:hover, nav#mecanica:hover {
+  opacity: 0.9;
+}
+
+nav#calorimetria a, nav#mecanica a {
+  color: black;
+  text-decoration: none;
+}
+
+nav#calorimetria a:hover, nav#mecanica a:hover {
+  color: purple;
+  text-decoration: underline;
+}
+
+div#olá {
+  width: 100%; /* Alterado de largura fixa para porcentagem para responsividade */
+  background-color: rgb(215, 218, 215);
+  margin: -20px auto 0px auto;
+  box-shadow: 2px 2px 50px black;
+  padding: 10px;
+}
+
+section#corpo, aside#lateral {
+  width: 100%; /* Alterado de largura fixa para porcentagem para responsividade */
+  float: none; /* Removido o flutuamento para layout móvel */
+  border-right: none; /* Removida a borda para layout móvel */
+  padding-right: 0;
+}
+
+footer#top {
+  clear: both;
+  border-top: 1px solid;
+}
+
+footer#top p {
+  text-align: center;
+}
+
+fieldset {
+  text-align: center;
+  width: 100%; /* Alterado de largura fixa para porcentagem para responsividade */
+  position: relative;
+  left: 0; /* Ajustada a posição para layout móvel */
+}
+
+fieldset p {
+  text-align: left;
+}
+
+input, option {
+  background-color: #b8b8c5;
+}
+
+/* Estilos para tablets e desktops */
+@media (min-width: 600px) {
+  .column {
+    width: 50%;
+  }
+
+  header img {
+    padding: 3px 10%; /* Ajustado o padding para telas maiores */
+  }
+
+  div#olá {
+    width: 80%; /* Ajustada a largura para telas maiores */
+    margin: -20px auto 0px auto;
+  }
+
+  section#corpo, aside#lateral {
+    width: 45%; /* Ajustada a largura para telas maiores */
+    float: left; /* Restaurado o flutuamento para telas maiores */
+    border-right: 1px solid rgba(54, 53, 53, 0.76); /* Restaurada a borda para telas maiores */
+    padding-right: 2%;
+  }
+
+  aside#lateral {
+    float: right;
+  }
+
+  fieldset {
+    width: 50%; /* Ajustada a largura para telas maiores */
+    left: 25%; /* Ajustada a posição para telas maiores */
+  }
+}
